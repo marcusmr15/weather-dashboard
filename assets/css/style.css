@@ -1,0 +1,119 @@
+:root {
+    --header-color1: #261360;
+    --header-color2: #465ab8;
+    --text-inside: #ffffff;
+    --city-box: #aeaeae;
+    --day-box: #323d4f;
+}
+
+h1,h2,h3,h4,h5,h6 {
+    font-family: 'Noto Sans', sans-serif;
+    margin: 0%;
+}
+
+body {
+    font-family: 'Noto Sans', sans-serif;
+}
+
+header {
+    background: linear-gradient(to right, var(--header-color2) 0%, var(--header-color1)100%);
+    color: var(--text-inside);
+    padding: 10px;
+    text-wrap: wrap;
+    width: 100% !important;
+    margin-bottom: 20px;
+}
+
+#layoutAll {
+    display: flex;
+    padding: 15px;
+}
+
+#citySearchLayout {
+    display: flex;
+    flex-direction: column;
+    padding: 5px;
+}
+
+input {
+    height: 30px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: 1px solid black;
+    width: 100%;
+}
+
+.button {
+    border-radius: 5px;
+    margin: 0px;
+    transition: transform 0.2s;
+}
+.button:hover {
+    cursor: pointer;
+}
+.button:active {
+    transform: scale(0.94);
+}
+
+#line {
+    border-bottom: 1px solid black;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    
+}
+
+.cityName {
+    background-color: var(--city-box);
+    border-radius: 5px;
+    margin-bottom: 10px;
+    text-align: center;
+    padding: 5px;
+}
+
+#weatherLayout {
+    padding: 5px;
+    padding-left: 15px;
+    width: 100%;
+}
+
+#currentWeather {
+    border: 1px solid black;
+    padding: 5px;
+    line-height: 2;
+    margin-bottom: 40px;
+}
+
+#weatherNextDays {
+    display: flex;
+    flex-wrap: wrap;
+
+}
+
+.daysLayout {
+    background-color: var(--day-box);
+    color: var(--text-inside);
+    border: 1px solid black;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    width: 140px;
+    line-height: 2;
+    padding: 5px;
+}
+
+#blankColumn {
+    width: 400px;
+}
+
+@media (max-width: 780px) {
+    #blankColumn {
+        width: 0px;
+    }
+}
+
+@media (max-width: 450px) {
+    #layoutAll {
+        flex-direction: column;
+    }
+}
+

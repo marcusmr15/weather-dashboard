@@ -3,74 +3,97 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Compressed Foundation Framework's CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.6.3/css/foundation.min.css">
+    <!--Google Fonts (Noto Sans)-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap" rel="stylesheet">
+    <!--CSS local document link-->
+    <link rel="stylesheet" href="./assets/css/style.css">
     <title>Weather Dashboard</title>
 </head>
 <body>
-    <header>
+    <header class="text-center">
         <h1>Weather Dashboard</h1>
     </header>
 
-    <section id="citySearchLayout">
-        <h2>Search for a City 🔍</h2>
-        <input placeholder="e.g., San Diego">
-        <button id="searchBtn">Search</button>
-        <ul id="citiesList">
-            <div class="cityName">City 1</div>
-            <div class="cityName">City 2</div>
-            <div class="cityName">City 3</div>
-        </ul>
-    </section>
-
-    <section id="weatherLayout">
-        <div id="currentWeather">
-            <h2>City 1 (<em>Date format:</em> 9/13/2022)</h2>
-            <div>Temp: </div>
-            <div>Wind: </div>
-            <div>Humidity: </div>
+    <section id="layoutAll">
+        <div id="citySearchLayout">
+            <h2>Search for a City:</h2>
+            <input placeholder="e.g., San Diego">
+            <button class="button primary expanded">Search</button>
+            <div id="line"></div>
+            <div id="citiesList">
+                <div class="cityName">City 1</div>
+                <div class="cityName">City 2</div>
+                <div class="cityName">City 3</div>
+            </div>
         </div>
 
-        <div id="weatherNextDays">
+
+        <div id="weatherLayout">
+            <div id="currentWeather">
+              <h2>City 1 (<em>Date format:</em> 9/  13/2022)</h2>
+              <div>Temp: </div>
+              <div>Wind: </div>
+              <div>Humidity: </div>
+            </div>
+
             <h3>5-Day Forecast:</h3>
-            <div id="day1">
-                <div>9/14/2022</div>
-                <div>☀️</div>
-                <div>Temp: </div>
-                <div>Wind: </div>
-                <div>Humidity: </div>
-            </div>
+            
+            <div id="weatherNextDays">
+                <div id="day1" class="daysLayout">
+                    <div>9/14/2022</div>
+                    <div>☀️</div>
+                    <div>Temp: </div>
+                    <div>Wind: </div>
+                    <div>Humidity: </div>
+                </div>
 
-            <div id="day2">
-               <div>9/15/2022</div>
-               <div>🌧️</div>
-               <div>Temp: </div>
-               <div>Wind: </div>
-               <div>Humidity: </div>
-            </div>
+              <div id="day2" class="daysLayout">
+                   <div>9/15/2022</div>
+                   <div>🌧️</div>
+                   <div>Temp: </div>
+                   <div>Wind: </div>
+                   <div>Humidity: </div>
+                </div>
 
-            <div id="day3">
-                <div>9/16/2022</div>
-                <div>❄️</div>
-                <div>Temp: </div>
-                <div>Wind: </div>
-                <div>Humidity: </div>
-            </div>
+                <div id="day3" class="daysLayout">
+                    <div>9/16/2022</div>
+                    <div>❄️</div>
+                    <div>Temp: </div>
+                    <div>Wind: </div>
+                    <div>Humidity: </div>
+                 </div>
 
-            <div id="day4">
-                <div>9/17/2022</div>
-                <div>🌥️</div>
-                <div>Temp: </div>
-                <div>Wind: </div>
-                <div>Humidity: </div>
-            </div>
+                <div id="day4" class="daysLayout">
+                    <div>9/17/2022</div>
+                    <div>🌥️</div>
+                    <div>Temp: </div>
+                    <div>Wind: </div>
+                    <div>Humidity: </div>
+                </div>
 
-            <div id="day5">
-                <div>9/18/2022</div>
-                <div>☀️</div>
-                <div>Temp: </div>
-                <div>Wind: </div>
-                <div>Humidity: </div>
+                <div id="day5" class="daysLayout">
+                    <div>9/18/2022</div>
+                    <div>☀️</div>
+                    <div>Temp: </div>
+                    <div>Wind: </div>
+                   <div>Humidity: </div>
+                </div>
             </div>
         </div>
+        <div id="blankColumn"></div>
     </section>
+
+     <!--jQuery Link-->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <!-- Compressed Foundation Framework's JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/foundation-sites@6.8.1/dist/js/foundation.min.js" crossorigin="anonymous"></script>
+    <script>
+        $(document).foundation();
+    </script>
+
 </body>
 </html>

@@ -62,7 +62,7 @@ input {
     
 }
 
-.cityName {
+/*.cityName*/ li {
     background-color: var(--city-box);
     border-radius: 5px;
     margin-bottom: 10px;
@@ -93,7 +93,7 @@ input {
     background-color: var(--day-box);
     color: var(--text-inside);
     border: 1px solid black;
-    margin-right: 10px;
+    margin-right: 20px;
     margin-bottom: 10px;
     margin-top: 10px;
     width: 140px;
@@ -102,7 +102,7 @@ input {
 }
 
 #blankColumn {
-    width: 400px;
+    width: 200px;
 }
 
 @media (max-width: 780px) {

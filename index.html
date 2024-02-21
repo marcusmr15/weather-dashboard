@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,6 +14,7 @@
     <link rel="stylesheet" href="./assets/css/style.css">
     <title>Weather Dashboard</title>
 </head>
+
 <body>
     <header class="text-center">
         <h1>Weather Dashboard</h1>
@@ -21,54 +23,56 @@
     <section id="layoutAll">
         <div id="citySearchLayout">
             <h2>Search for a City:</h2>
-            <input placeholder="e.g., San Diego">
-            <button class="button primary expanded">Search</button>
+            <input id="cityInput" placeholder="e.g., San Diego">
+            <button id="searchButton" class="button primary expanded">Search</button>
             <div id="line"></div>
-            <div id="citiesList">
-                <div class="cityName">City 1</div>
+            <ul id="citiesList">
+                <!-- <div class="cityName">City 1</div>
                 <div class="cityName">City 2</div>
-                <div class="cityName">City 3</div>
-            </div>
+                <div class="cityName">City 3</div> -->
+            </ul>
         </div>
 
 
         <div id="weatherLayout">
             <div id="currentWeather">
-              <h2>City 1 (<em>Date format:</em> 9/  13/2022)</h2>
-              <div>Temp: </div>
-              <div>Wind: </div>
-              <div>Humidity: </div>
+                <h2>Liberty City</h2>
+                <h4 id="dateToday">Today, ...</h4>
+                <div>☀️</div>
+                <div>Temp: </div>
+                <div>Wind: </div>
+                <div>Humidity: </div>
             </div>
 
             <h3>5-Day Forecast:</h3>
-            
+
             <div id="weatherNextDays">
                 <div id="day1" class="daysLayout">
-                    <div>9/14/2022</div>
+                    <div id="dateTomorrow">9/14/2022</div>
                     <div>☀️</div>
                     <div>Temp: </div>
                     <div>Wind: </div>
                     <div>Humidity: </div>
                 </div>
 
-              <div id="day2" class="daysLayout">
-                   <div>9/15/2022</div>
-                   <div>🌧️</div>
-                   <div>Temp: </div>
-                   <div>Wind: </div>
-                   <div>Humidity: </div>
+                <div id="day2" class="daysLayout">
+                    <div id="dateDay2">9/15/2022</div>
+                    <div>🌧️</div>
+                    <div>Temp: </div>
+                    <div>Wind: </div>
+                    <div>Humidity: </div>
                 </div>
 
                 <div id="day3" class="daysLayout">
-                    <div>9/16/2022</div>
+                    <div id="dateDay3">9/16/2022</div>
                     <div>❄️</div>
                     <div>Temp: </div>
                     <div>Wind: </div>
                     <div>Humidity: </div>
-                 </div>
+                </div>
 
                 <div id="day4" class="daysLayout">
-                    <div>9/17/2022</div>
+                    <div id="dateDay4">9/17/2022</div>
                     <div>🌥️</div>
                     <div>Temp: </div>
                     <div>Wind: </div>
@@ -76,20 +80,29 @@
                 </div>
 
                 <div id="day5" class="daysLayout">
-                    <div>9/18/2022</div>
+                    <div id="dateDay5">9/18/2022</div>
                     <div>☀️</div>
                     <div>Temp: </div>
                     <div>Wind: </div>
-                   <div>Humidity: </div>
+                    <div>Humidity: </div>
                 </div>
             </div>
         </div>
         <div id="blankColumn"></div>
     </section>
 
-     <!--jQuery Link-->
-    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
-    <!-- Compressed Foundation Framework's JavaScript -->
-    <script src="https://cdn.jsdelivr.net/npm/foundation-sites@6.8.1/dist/js/foundation.min.js" crossorigin="anonymous"></script>
+    <!--jQuery Link-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/dayjs@1.11.3/dayjs.min.js"
+    integrity="sha256-iu/zLUB+QgISXBLCW/mcDi/rnf4m4uEDO0wauy76x7U="
+    crossorigin="anonymous"></script>
+        
+    <!-- //Compressed Foundation Framework's JavaScript 
+    <script src="https://cdn.jsdelivr.net/npm/foundation-sites@6.8.1/dist/js/foundation.min.js" crossorigin="anonymous"></script> -->
+
+    <!--JavaScript local document link-->
+    <script src="./assets/js/script.js"></script>
+
 </body>
+
 </html>

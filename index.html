@@ -4,13 +4,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Compressed Foundation Framework's CSS -->
+    <!--*Compressed Foundation Framework's CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.6.3/css/foundation.min.css">
-    <!--Google Fonts (Noto Sans)-->
+    <!--*Google Fonts (Noto Sans)-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap" rel="stylesheet">
-    <!--CSS local document link-->
+    <!--*CSS local document link-->
     <link rel="stylesheet" href="./assets/css/style.css">
     <title>Weather Dashboard</title>
 </head>
@@ -23,7 +23,7 @@
     <section id="layoutAll">
         <div id="citySearchLayout">
             <h2>Search for a City:</h2>
-            <input id="cityInput" placeholder="e.g., San Diego">
+            <input id="cityInput" placeholder="e.g., San Francisco">
             <button id="searchButton" class="button primary expanded">Search</button>
             <div id="line"></div>
             <ul id="citiesList">
@@ -37,20 +37,26 @@
 
         <div id="weatherLayout">
             <div id="currentWeather">
-                <h2 id="cityNameToday"></h2>
+                <h2 id="cityNameToday">Welcome!</h2>
                 <h4 id="dateToday">Today, ...</h4>
-                <img id="iconToday" src="" alt="Weather Icon">
-                <div id="tempToday"></div>
-                <div id="windToday"></div>
+                <img id="iconToday" class="hide" src="" alt="Weather Icon">
+                <div id="tempToday">1. The current weather of the searched city will display here! 🌤️</div>
+                <div id="windToday">2. Clicking the 'Search' button will also create a search history. 🔍</div>
                 <div id="humidityToday"></div>
             </div>
 
             <h3>5-Day Forecast:</h3>
+            <p id='atNoonText' class="hide">at noon</p>
+            <div id="description">
+                <p class="descriptions">1. A five-day forecast will appear in separate cards regarding the searched city. 5️⃣</p>
+                <p class="descriptions">2. Forecasts show weather at noon, typically the day's peak temperature. 🕛</p>
+                <p class="descriptions">3. View the temperature, wind speed, and humidity to plan ahead!🌡️</p>
+            </div>
 
-            <div id="weatherNextDays">
+            <div id="weatherNextDays" class="hide">
                 <div id="day1" class="daysLayout">
                     <div id="dateTomorrow">9/14/2022</div>
-                    <div>☀️</div>
+                    <img id="icon1" src="" alt="Weather Icon">
                     <div id="temp1">Temp: </div>
                     <div id="wind1">Wind: </div>
                     <div id="humidity1">Humidity: </div>
@@ -58,7 +64,7 @@
 
                 <div id="day2" class="daysLayout">
                     <div id="dateDay2">9/15/2022</div>
-                    <div>🌧️</div>
+                    <img id="icon2" src="" alt="Weather Icon">
                     <div id="temp2">Temp: </div>
                     <div id="wind2">Wind: </div>
                     <div id="humidity2">Humidity: </div>
@@ -66,7 +72,7 @@
 
                 <div id="day3" class="daysLayout">
                     <div id="dateDay3">9/16/2022</div>
-                    <div>❄️</div>
+                    <img id="icon3" src="" alt="Weather Icon">
                     <div id="temp3">Temp: </div>
                     <div id="wind3">Wind: </div>
                     <div id="humidity3">Humidity: </div>
@@ -74,7 +80,7 @@
 
                 <div id="day4" class="daysLayout">
                     <div id="dateDay4">9/17/2022</div>
-                    <div>🌥️</div>
+                    <img id="icon4" src="" alt="Weather Icon">
                     <div id="temp4">Temp: </div>
                     <div id="wind4">Wind: </div>
                     <div id="humidity4">Humidity: </div>
@@ -82,7 +88,7 @@
 
                 <div id="day5" class="daysLayout">
                     <div id="dateDay5">9/18/2022</div>
-                    <div>☀️</div>
+                    <img id="icon5" src="" alt="Weather Icon">
                     <div id="temp5">Temp: </div>
                     <div id="wind5">Wind: </div>
                     <div id="humidity5">Humidity: </div>
@@ -92,7 +98,7 @@
         <div id="blankColumn"></div>
     </section>
 
-    <!--jQuery Link-->
+    <!--*jQuery Link-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/dayjs@1.11.3/dayjs.min.js"
     integrity="sha256-iu/zLUB+QgISXBLCW/mcDi/rnf4m4uEDO0wauy76x7U="
@@ -101,7 +107,7 @@
     <!-- //Compressed Foundation Framework's JavaScript 
     <script src="https://cdn.jsdelivr.net/npm/foundation-sites@6.8.1/dist/js/foundation.min.js" crossorigin="anonymous"></script> -->
 
-    <!--JavaScript local document link-->
+    <!--*JavaScript local document link-->
     <script src="./assets/js/script.js"></script>
 
 </body>

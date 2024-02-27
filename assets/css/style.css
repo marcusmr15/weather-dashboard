@@ -70,6 +70,10 @@ input {
     padding: 5px;
 }
 
+li:hover {
+    cursor:  pointer;
+}
+
 #weatherLayout {
     padding: 5px;
     padding-left: 15px;
